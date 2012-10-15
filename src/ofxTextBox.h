@@ -18,7 +18,7 @@ public:
     {
         _text  = L"";
         _font  = nil;
-        __bShowFrame = true;
+        _bShowFrame = true;
     }
     
     virtual ~ofxTextBox()
