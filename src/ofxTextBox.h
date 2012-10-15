@@ -18,6 +18,7 @@ public:
     {
         _text  = L"";
         _font  = nil;
+        __bShowFrame = true;
     }
     
     virtual ~ofxTextBox()
@@ -42,6 +43,10 @@ public:
     {
         _font = font;
         refresh();
+    }
+    
+    void showsFrame(bool b){
+        _bShowFrame = b;
     }
     
     void refresh()
@@ -75,10 +80,12 @@ public:
     void draw()
     {
         _font->drawString(_drawingText, _rect.x, _rect.y);
-        ofPushStyle();
-        ofNoFill();
-        ofRect(_rect.x, _rect.y, _rect.width, _rect.height);
-        ofPopStyle();
+        if (_bShowFrame) {
+            ofPushStyle();
+            ofNoFill();
+            ofRect(_rect.x, _rect.y, _rect.width, _rect.height);
+            ofPopStyle();
+        }
     }
     
        
@@ -87,5 +94,6 @@ protected:
     wstring                     _text;
     ofRectangle                 _rect;
     ofxTrueTypeFontUC*          _font;
+    bool                        _bShowFrame;
 
 };
