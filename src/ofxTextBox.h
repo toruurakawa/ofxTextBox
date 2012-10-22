@@ -79,7 +79,10 @@ public:
     
     void draw()
     {
-        _font->drawString(_drawingText, _rect.x, _rect.y);
+        if (ofGetRectMode() == OF_RECTMODE_CENTER) {
+            _font->drawString(_drawingText, _rect.x-_rect.width/2., _rect.y-_rect.height/2.);
+        } else
+            _font->drawString(_drawingText, _rect.x, _rect.y);
         if (_bShowFrame) {
             ofPushStyle();
             ofNoFill();
