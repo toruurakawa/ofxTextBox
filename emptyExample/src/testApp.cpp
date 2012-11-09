@@ -16,7 +16,7 @@ void testApp::setup(){
     
     tb_resize.loadFont("Osaka.ttf", 12);
     tb_resize.setText("自分が中学の四年生だった時の話である。");
-    tb_resize.setRectangle(ofRectangle(250, 400, 300, 250));
+    tb_resize.setRectangle(ofRectangle(250, 350, 300, 250));
     tb_resize.setAutoResizeFontSize(true);
 
 }
