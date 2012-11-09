@@ -24,5 +24,6 @@ class testApp : public ofBaseApp{
     ofxTrueTypeFontUC font;
     ofxTextBox tb_en;
     ofxTextBox tb_jp;
+    ofxTextBox tb_resize;
 
 };
