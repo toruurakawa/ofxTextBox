@@ -57,7 +57,7 @@ public:
     
     void refresh()
     {
-        if (_text.c_str() != nil && _rect.width > 0 && _rect.height > 0 ){
+        if (_text.c_str() != NULL && _rect.width > 0 && _rect.height > 0 ){
             reconstructText();
             while (_font.getStringBoundingBox(_drawingText,0,0).height > _rect.height){
                 _drawingText = _drawingText.substr(0, _drawingText.length()-1);
