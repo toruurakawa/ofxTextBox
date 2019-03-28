@@ -8,7 +8,6 @@
 #pragma once 
 
 #include "ofMain.h"
-#include "ofxTrueTypeFontUC.h"
 
 class ofxTextBox
 {
@@ -169,7 +168,7 @@ protected:
     string                      _fontName;
     int                         _fontSize;
     ofRectangle                 _rect;
-    ofxTrueTypeFontUC           _font;
+    ofTrueTypeFont              _font;
     bool                        _bShowFrame;
     bool                        _bAutoResizeFontSize;
     bool                        _bOmitted;
